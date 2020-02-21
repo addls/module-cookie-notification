@@ -26,7 +26,8 @@ define([
 
                 $.mage.cookies.set(this.options.cookieName, this.options.cookieValue, {expires: cookieExpires, path: this.options.cookiePath, domain: this.options.cookieDomain});
                 if ($.mage.cookies.get(this.options.cookieName)) {
-                    window.location.reload();
+                    $("#cookienotification-block").hide();
+                    //window.location.reload();
                 } else {
                     window.location.href = this.options.cookieMoreLink;
                 }
